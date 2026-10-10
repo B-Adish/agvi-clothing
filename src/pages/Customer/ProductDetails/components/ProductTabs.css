@@ -1,0 +1,141 @@
+.product-tabs {
+    margin-top: 70px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.tabs-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.tabs-header button {
+    border: none;
+    background: #f7f2fc;
+    color: #5a2d82;
+    padding: 12px 24px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.tabs-header button:hover {
+    background: #eadcf6;
+}
+
+.tabs-header button.active {
+    background: #5a2d82;
+    color: #ffffff;
+}
+
+.tabs-content {
+    animation: fadeIn 0.35s ease;
+}
+
+.tab-panel h3 {
+    color: #5a2d82;
+    font-size: 26px;
+    margin-bottom: 18px;
+}
+
+.tab-panel p {
+    color: #555555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.tab-panel ul {
+    padding-left: 20px;
+}
+
+.tab-panel li {
+    color: #555555;
+    margin-bottom: 12px;
+    line-height: 1.7;
+}
+
+.review-card {
+    background: #fcfafe;
+    border: 1px solid #ece3f7;
+    border-radius: 18px;
+    padding: 22px;
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(90, 45, 130, 0.08);
+}
+
+.review-card h4 {
+    color: #ffb400;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.review-card strong {
+    display: block;
+    color: #2f2142;
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.review-card p {
+    margin: 0;
+    color: #666666;
+    line-height: 1.7;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 992px) {
+    .product-tabs {
+        padding: 28px;
+    }
+
+    .tab-panel h3 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-tabs {
+        padding: 22px;
+        margin-top: 50px;
+    }
+
+    .tabs-header {
+        justify-content: center;
+    }
+
+    .tabs-header button {
+        width: 100%;
+    }
+
+    .tab-panel h3 {
+        font-size: 22px;
+    }
+
+    .review-card {
+        padding: 18px;
+    }
+}

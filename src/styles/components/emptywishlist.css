@@ -1,0 +1,32 @@
+.empty-wishlist{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:80px 0;
+    text-align:center;
+}
+
+.empty-wishlist h2{
+    font-size:36px;
+    color:#2F2142;
+    margin-bottom:12px;
+}
+
+.empty-wishlist p{
+    color:#777;
+    margin-bottom:30px;
+}
+
+.wishlist-shop-btn{
+    padding:14px 32px;
+    border-radius:12px;
+    background:#5A2D82;
+    color:#fff;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.wishlist-shop-btn:hover{
+    background:#472066;
+}

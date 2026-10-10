@@ -1,0 +1,48 @@
+.home-page{
+    background:#F0E6F8;
+}
+
+.hero-section{
+    height:700px;
+    background:#EBDCF6;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:40px;
+    font-weight:700;
+    color:#5A2D82;
+}
+
+.new-arrivals,
+.categories,
+.trending,
+.why-agvi,
+.newsletter{
+    min-height:500px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:34px;
+    font-weight:600;
+}
+
+.new-arrivals{
+    background:#FFFFFF;
+}
+
+.categories{
+    background:#F5ECFA;
+}
+
+.trending{
+    background:#FFFFFF;
+}
+
+.why-agvi{
+    background:#F5ECFA;
+}
+
+.newsletter{
+    background:linear-gradient(135deg,#5A2D82,#7B3FA1);
+    color:#FFFFFF;
+}

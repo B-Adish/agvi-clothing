@@ -1,0 +1,14 @@
+.recently-viewed{
+    margin-top:90px;
+}
+
+.recently-viewed h2{
+    font-size:32px;
+    color:#2F2142;
+    margin-bottom:10px;
+}
+
+.recently-viewed p{
+    color:#777;
+    margin-bottom:35px;
+}

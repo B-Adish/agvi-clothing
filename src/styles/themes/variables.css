@@ -1,0 +1,36 @@
+:root {
+
+    /* Brand Colors */
+
+    --primary: #72264C;
+    --primary-dark: #40152F;
+
+    --secondary: #F3E5EB;
+
+    --accent: #C79A2E;
+
+    --white: #FFFFFF;
+
+    --black: #292329;
+
+    --gray: #756D72;
+
+    --border: #E4DDE1;
+
+    /* Fonts */
+
+    --heading-font: "Cormorant Garamond", serif;
+
+    --body-font: "Poppins", sans-serif;
+
+    /* Layout */
+
+    --container: 1200px;
+
+    --radius: 10px;
+
+    --shadow: 0 10px 25px rgba(114, 38, 76, 0.08);
+
+    --transition: .3s ease;
+
+}

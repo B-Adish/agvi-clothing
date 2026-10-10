@@ -1,0 +1,31 @@
+.related-products{
+    margin-top:90px;
+}
+
+.related-products h2{
+    font-size:32px;
+    color:#2F2142;
+    margin-bottom:35px;
+}
+
+.related-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:28px;
+}
+
+@media(max-width:1100px){
+
+    .related-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:700px){
+
+    .related-grid{
+        grid-template-columns:1fr;
+    }
+
+}
