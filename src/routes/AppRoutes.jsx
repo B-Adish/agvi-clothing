@@ -12,6 +12,10 @@ import ForgotPassword from "../pages/Customer/Auth/ForgotPassword";
 import ProtectedRoute from "./ProtectedRoute";
 import Profile from "../pages/Customer/Profile/Profile";
 import Checkout from "../pages/Customer/Checkout/Checkout";
+import AdminLogin from "../pages/Admin/Login/AdminLogin";
+import AdminDashboard from "../pages/Admin/Dashboard/AdminDashboard";
+import AdminProtectedRoute from "./AdminProtectedRoute";
+import AdminProducts from "../pages/Admin/Products/AdminProducts";
 
 function AppRoutes() {
     return (
@@ -36,6 +40,19 @@ function AppRoutes() {
                         }
                     />
                 </Route>
+                <Route path="/admin/dashboard" element={
+                        <AdminProtectedRoute>
+                            <AdminDashboard />
+                        </AdminProtectedRoute>
+                    }
+                />
+                <Route path="/admin/login" element={<AdminLogin />} />
+                <Route path="/admin/products" element={
+                        <AdminProtectedRoute>
+                            <AdminProducts />
+                        </AdminProtectedRoute>
+                    }
+                />
             </Routes>
         </BrowserRouter>
     );

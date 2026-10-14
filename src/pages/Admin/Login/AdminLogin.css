@@ -1,0 +1,117 @@
+
+.admin-login {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    background: #f8f3f5;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+.admin-login *,
+.admin-login *::before,
+.admin-login *::after {
+    box-sizing: border-box;
+}
+
+.admin-login form {
+    width: 100%;
+    max-width: 430px;
+    padding: 42px 36px;
+    background: #ffffff;
+    border: 1px solid #eadce3;
+    border-radius: 12px;
+    box-shadow: 0 12px 36px rgba(64, 21, 47, 0.08);
+}
+
+.admin-login h1 {
+    margin: 0 0 28px;
+    color: #72264c;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.admin-login h2 {
+    margin: 0 0 8px;
+    color: #40152f;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.admin-login form > p:not([role="alert"]) {
+    margin: 0 0 28px;
+    color: #777078;
+    font-size: 13px;
+    text-align: center;
+}
+
+.admin-login label {
+    display: block;
+    margin: 18px 0 8px;
+    color: #40152f;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.admin-login input {
+    width: 100%;
+    min-height: 46px;
+    padding: 12px 14px;
+    border: 1px solid #d9cbd2;
+    border-radius: 6px;
+    outline: none;
+    background: #fff;
+    color: #30232b;
+    font: inherit;
+    font-size: 14px;
+}
+
+.admin-login input:focus {
+    border-color: #72264c;
+    box-shadow: 0 0 0 3px rgba(114, 38, 76, 0.1);
+}
+
+.admin-login button {
+    width: 100%;
+    min-height: 48px;
+    margin-top: 28px;
+    border: 1px solid #72264c;
+    border-radius: 6px;
+    background: #72264c;
+    color: #fff;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.admin-login button:hover:not(:disabled) {
+    background: #40152f;
+    border-color: #40152f;
+}
+
+.admin-login button:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+
+.admin-login [role="alert"] {
+    padding: 10px 12px;
+    border-radius: 5px;
+    background: #fff0f0;
+    color: #a12626;
+    font-size: 13px;
+}
+
+@media (max-width: 480px) {
+    .admin-login form {
+        padding: 32px 22px;
+    }
+}

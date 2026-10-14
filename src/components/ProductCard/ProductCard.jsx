@@ -1,3 +1,4 @@
+
 import "./ProductCard.css";
 import { Link } from "react-router-dom";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
@@ -13,6 +14,28 @@ function ProductCard({ product }) {
         (item) => item.id === product.id
     );
 
+    // Read the product's availability assignment.
+    const availability =
+        product.availability ||
+        product.fulfillmentType ||
+        product.dispatchType ||
+        "";
+
+    const normalizedAvailability = availability
+        .toLowerCase()
+        .replace(/[-_]/g, " ")
+        .trim();
+
+    let availabilityLabel = "";
+
+    if (normalizedAvailability === "made to order") {
+        availabilityLabel = "Made to Order";
+    } else if (
+        normalizedAvailability === "immediate dispatch"
+    ) {
+        availabilityLabel = "Immediate Dispatch";
+    }
+
     const handleWishlist = (e) => {
         e.preventDefault();
         e.stopPropagation();
@@ -27,7 +50,7 @@ function ProductCard({ product }) {
             ...product,
             quantity: 1,
             selectedSize: product.sizes?.[0] || "M",
-            selectedColor: product.colors?.[0]
+            selectedColor: product.colors?.[0],
         });
     };
 
@@ -38,7 +61,9 @@ function ProductCard({ product }) {
                 className="wishlist-btn"
                 onClick={handleWishlist}
                 aria-label={
-                    isWishlisted ? "Remove from wishlist" : "Add to wishlist"
+                    isWishlisted
+                        ? "Remove from wishlist"
+                        : "Add to wishlist"
                 }
             >
                 {isWishlisted ? (
@@ -49,11 +74,26 @@ function ProductCard({ product }) {
             </button>
 
             <div className="product-image">
+                {availabilityLabel && (
+                    <span
+                        className={`product-availability-badge ${
+                            normalizedAvailability === "made to order"
+                                ? "made-to-order-badge"
+                                : "immediate-dispatch-badge"
+                        }`}
+                    >
+                        {availabilityLabel}
+                    </span>
+                )}
+
                 <Link
                     to={`/product/${product.slug}`}
                     className="product-card-link"
                 >
-                    <img src={product.images[0]} alt={product.name} />
+                    <img
+                        src={product.images[0]}
+                        alt={product.name}
+                    />
                 </Link>
             </div>
 
@@ -77,7 +117,9 @@ function ProductCard({ product }) {
                 >
                     <HiOutlineShoppingBag />
                     <span>
-                        {product.stock === 0 ? "Out of Stock" : "Add to Cart"}
+                        {product.stock === 0
+                            ? "Out of Stock"
+                            : "Add to Cart"}
                     </span>
                 </button>
             </div>
